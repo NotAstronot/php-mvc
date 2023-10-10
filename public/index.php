@@ -1,2 +1,9 @@
 <?php
-echo "Hello MVC";
+
+
+
+$path = '/index';
+
+if (isset($_SERVER['PATH_INFO'])) {
+    $path = $_SERVER['PATH_INFO'];
+}
