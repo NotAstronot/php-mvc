@@ -13,9 +13,9 @@ class Database
             require_once __DIR__ . '/../../config/database.php';
             $config = getDatabaseConfig();
             self::$pdo = new \PDO(
-                $config['database']['$env']['url'],
-                $config['database']['$env']['username'],
-                $config['database']['$env']['password'],
+                $config['database'][$env]['url'],
+                $config['database'][$env]['username'],
+                $config['database'][$env]['password']
             );
         }
         return self::$pdo;
